@@ -1,6 +1,6 @@
 ---
 - name: excuting the operation
-  hosts: 'jenkins-ci'
+  hosts: all
   become: yes
   become_method: sudo
   
