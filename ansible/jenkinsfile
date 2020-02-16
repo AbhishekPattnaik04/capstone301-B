@@ -25,6 +25,8 @@ node {
 
   stage('Geting Ready For Ansible') {
   sh label: 'Jenkins', script: "echo '<h1> TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>' > ansible/index.html"
+  sh 'pwd';
+  sh 'ls -a';
   sh label: 'terraform', script: 'ansible-playbook -i /root/.jenkins/workspace/capstoneTerraform/terraform/jenkins-ci.ini -u ubuntu --key /root/.ssh/capstone301 ./web-playbook.yaml'
 }  
 
