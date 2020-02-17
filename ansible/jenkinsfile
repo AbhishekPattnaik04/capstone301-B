@@ -13,8 +13,8 @@ node {
     def downloadSpec = """{
     "files": [
     {
-      "pattern": "Kalingamusic/*.war",
-      "target": "ansible/templates/kalingamusic-0.0.1-SNAPSHOT.war"
+      "pattern": "Kalingamusic/kalingamusic-0.0.1-SNAPSHOT.war",
+      "target": "templates/"
       
     }
     ]
