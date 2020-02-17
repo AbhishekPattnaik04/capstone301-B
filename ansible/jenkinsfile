@@ -14,7 +14,7 @@ node {
     "files": [
     {
       "pattern": "petclinic/petclinic.war",
-      "target": "/root/artifacts"
+      "target": "artifacts/"
       
     }
     ]
