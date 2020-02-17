@@ -14,7 +14,7 @@ node {
     "files": [
     {
       "pattern": "Kalingamusic/*.war",
-      "target": "/home/mtadminnuvepro/artifacts/"
+      "target": "/root/demo/ansible/"
       
     }
     ]
