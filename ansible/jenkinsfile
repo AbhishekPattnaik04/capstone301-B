@@ -14,7 +14,7 @@ node {
     "files": [
     {
       "pattern": "Kalingamusic/*.war",
-      "target": "/root/demo/ansible/"
+      "target": "ansible/templates/"
       
     }
     ]
