@@ -9,7 +9,7 @@
   - name: Remove ROOT folder initially
     command: rm -rf /opt/SP/apps/tomcat/webapps/*
     
-  #- name: Copy DevOps Project War Files
-  # copy: src=../../../ansible/templates/kalingamusic-0.0.1-SNAPSHOT.war dest=/opt/SP/apps/tomcat/webapps/ROOT.war mode=0644
-   # notify: 
-   # - Restart Tomcat
+  - name: Copy DevOps Project War Files
+    copy: src=../../../ansible/templates/kalingamusic-0.0.1-SNAPSHOT.war dest=/opt/SP/apps/tomcat/webapps/ROOT.war mode=0644
+    notify: 
+    - Restart Tomcat
