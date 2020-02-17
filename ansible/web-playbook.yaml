@@ -13,7 +13,7 @@
     notify: 
     - Restart Tomcat 
     
-   handlers:
-   - name: Restart Tomcat 
-     shell: "nohup sh /opt/SP/apps/tomcat/bin/catalina.sh start"
+  handlers:
+  - name: Restart Tomcat 
+    shell: "nohup sh /opt/SP/apps/tomcat/bin/catalina.sh start"
       
