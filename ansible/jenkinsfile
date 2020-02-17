@@ -13,8 +13,8 @@ node {
     def downloadSpec = """{
     "files": [
     {
-      "pattern": "Kalingamusic/kalingamusic-0.0.1-SNAPSHOT.war",
-      "target": "templates/"
+      "pattern": "petclinic/petclinic.war",
+      "target": "/root/artifacts"
       
     }
     ]
