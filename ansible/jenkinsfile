@@ -28,7 +28,7 @@ stage('Geting Ready For Ansible') {
   }
   
   stage('ansible deploy'){
-  sh label: 'terraform', script: 'ansible-playbook -i /var/lib/jenkins/workspace/capstoneTerraform/terraform/jenkins-ci.ini -u ubuntu --key /root/.ssh/capstone301 ./ansible/web-playbook.yaml -vvvv'
+  sh label: 'terraform', script: 'ansible-playbook -i /var/lib/jenkins/workspace/capstoneTerraform/terraform/jenkins-ci.ini -u ubuntu --key /var/lib/jenkins/.ssh/capstone301 ./ansible/web-playbook.yaml -vvvv'
 }  
 
 notify('Job Completed')   
