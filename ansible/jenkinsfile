@@ -26,11 +26,13 @@ node {
 stage('Geting Ready For Ansible') {
   sh label: 'Jenkins', script: "echo '<h1> TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>' > ansible/index.html"
   }
-  
+   def project_path="ansible/"
+ 
+ dir(project_path) {
   stage('ansible deploy'){
-  sh label: 'terraform', script: 'ansible-playbook -i /var/lib/jenkins/workspace/capstoneTerraform/terraform/jenkins-ci.ini -u ubuntu --key /var/lib/jenkins/secret.key/capstone301 ./ansible/web-playbook.yaml -vvvv'
+  sh label: 'terraform', script: 'ansible-playbook -i /var/lib/jenkins/workspace/capstoneTerraform/terraform/jenkins-ci.ini -u ubuntu --key /var/lib/jenkins/secret.key/capstone301 web-playbook.yaml -vvvv'
 }  
-
+}
 notify('Job Completed')   
 } catch (err) {
   notify("Error ${err}")
